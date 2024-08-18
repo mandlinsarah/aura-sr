@@ -1,6 +1,9 @@
 from setuptools import setup
 
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name="aura-sr",
     version="0.0.4",
@@ -14,6 +17,6 @@ setup(
         "huggingface_hub",
         "safetensors",
     ],
-    long_description=open("README.md").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
 )
